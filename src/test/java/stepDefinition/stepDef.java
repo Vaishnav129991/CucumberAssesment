@@ -89,12 +89,12 @@ public class stepDef {
 	@Then("Clicks on confirm and Patient should register successfully")
 	public void clicks_on_confirm_and_patient_should_register_successfully() {
 		driver.findElement(By.xpath("//input[@id='submit']")).click();
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		//wait.until(ExpectedConditions
-		//		.visibilityOfElementLocated(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span")));
-		//boolean patientId = driver.findElement(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span"))
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions
+			.visibilityOfElementLocated(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span")));
+		boolean patientId = driver.findElement(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span"))
 				//.isDisplayed();
-		//Assert.assertTrue("Patient Id should generate ", patientId);
+		Assert.assertTrue("Patient Id should generate ", patientId);
 	}
 
 	@When("Clicks on Find Patient Record")
