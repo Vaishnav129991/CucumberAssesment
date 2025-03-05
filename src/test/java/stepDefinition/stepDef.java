@@ -126,7 +126,7 @@ public class stepDef {
 	@Then("Clicks on confirm and patient name should update successfully")
 	public void clicks_on_confirm_and_patient_name_should_update_successfully() {
 		driver.findElement(By.xpath("//button[@id='registration-submit']")).click();
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(.5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='PersonName-givenName']")));
 				
 				WebElement actual_updated_name =  driver.findElement(By.xpath("//span[@class='PersonName-givenName']"));
