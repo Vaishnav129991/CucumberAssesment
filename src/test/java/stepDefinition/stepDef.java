@@ -92,8 +92,7 @@ public class stepDef {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions
 			.visibilityOfElementLocated(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span")));
-		boolean patientId = driver.findElement(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span"))
-				//.isDisplayed();
+		boolean patientId = driver.findElement(By.xpath("//*[@class=\"patient-header row\"]/div[2]/div/span")).isDisplayed();
 		Assert.assertTrue("Patient Id should generate ", patientId);
 	}
 
